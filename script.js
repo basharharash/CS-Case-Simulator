@@ -237,7 +237,7 @@ function generateChart() {
                 borderWidth: 2,
                 pointRadius: 5,
                 pointBackgroundColor: 'gold',
-                showLine: false // Only show points for Gold
+                showLine: false
             }
         ]
     };
