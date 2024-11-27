@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Opener Simulator</title>
+    <!-- Include Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Case Opener Simulator</h1>
+        <div class="input-group">
+            <label for="simulation-count">Number of Cases to Open:</label>
+            <input type="number" id="simulation-count" value="1000" min="1">
+        </div>
+        <div class="button-group">
+            <button id="start-simulation-btn">Start Simulation</button>
+            <button id="stop-simulation-btn" disabled>Stop Simulation</button>
+            <button id="open-one-case-btn">Open 1 Case</button>
+        </div>
+
+        <div id="statistics" style="display: none;">
+            <h2>Simulation Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>Total Cases Opened</h3>
+                    <p id="total-attempts">0</p>
+                </div>
+                <div class="stat-item common">
+                    <h3>Common Items</h3>
+                    <p id="common-count">0</p>
+                </div>
+                <div class="stat-item uncommon">
+                    <h3>Uncommon Items</h3>
+                    <p id="uncommon-count">0</p>
+                </div>
+                <div class="stat-item rare">
+                    <h3>Rare Items</h3>
+                    <p id="rare-count">0</p>
+                </div>
+                <div class="stat-item very-rare">
+                    <h3>Red Items</h3>
+                    <p id="red-count">0</p>
+                </div>
+                <div class="stat-item ultra-rare">
+                    <h3>Gold Items</h3>
+                    <p id="gold-count">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="simulation-container">
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Attempt</th>
+                        <th>Rarity</th>
+                    </tr>
+                </thead>
+                <tbody id="results-tbody">
+                    <!-- Results will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="chart-button-group">
+            <button id="show-chart-btn" style="display: none;">Show Results Graph</button>
+        </div>
+
+        <div id="chart-container" style="display: none;">
+            <canvas id="results-chart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
