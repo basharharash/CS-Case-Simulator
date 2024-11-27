@@ -1,5 +1,3 @@
-// Add Chart.js CDN in your HTML head section
-// <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 document.getElementById('start-simulation-btn').addEventListener('click', startSimulation);
 document.getElementById('stop-simulation-btn').addEventListener('click', stopSimulation);
